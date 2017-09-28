@@ -1,0 +1,87 @@
+<!-- An array is [] -->
+
+<script type="text/javascript">
+
+var students = [];//empty array
+// An object is {};
+var student = {};//empty object
+
+// just like dictionaries, objects are a combination of properties and values.
+// (in python we call them keys and values)
+
+// syntax is :
+// {
+// 	property : value
+// }
+// student['name'] = "Valerie" //python way
+// student.name = "Valerie"; //javascript way (dot notation)
+// console.log(student);
+
+student = {
+	name: "Valerie"
+}
+student.age = 37;
+console.log(student);
+student.status = "thirsty";
+
+
+var student2 = {
+	name: "Henry",
+	profession: "student",
+	language: "JavaScript"
+}
+
+// console.log(student2.language);
+
+var student3 = {
+	name: "Akil",
+	friends: [
+		"Amir,",
+		"Binh",
+		"Jong"
+		]
+}
+//How you write objects in JavaScript
+var student4 ={
+	name: "Valerie",
+	friends: [],
+	sayHello: function(name){
+		console.log(`Hello, ${name}`)
+	},
+	addFriend: function(newFriendName){
+		this.friends.push(newFriendName)
+	}
+}
+
+// // console.log(student4.name);
+// // student4.sayHello("Eddie");
+
+
+// // BRACKET NOTATION
+// // if you need a vaiable property, you MUST use braket notation.
+// console.log(student4["name"]);
+
+
+
+students = [
+	student,
+	student2,
+	student3,
+	student4
+];
+
+console.log(student[2]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
