@@ -1,0 +1,202 @@
+<script type="text/javascript">
+
+// print stuff ...
+
+// alert("Hello, World");
+// // semi-colons are optional (like Python)
+// // EVERYTHING inside the browser belongs to the window object 
+// // use the console to print. We will use this ALL the time
+// console.log("Hello World");
+// // actually wrtie to the window itself.The Document object is where all the HTML is at.
+// document.write("Hello, World");
+// Variables: Same as every other language... a variable is a place to stash something(number, 
+// 	string, array, object) that you could write yourself, but a var is faster.
+// Data-types available:
+// 1. Strings
+// 2a.Numbers -JavaScript has only the Number data type2a. float
+// 2b. Integer
+// 3.Booleans
+// 4.Arrays
+// 5. Objects (Dictionary/Object)
+
+// JS variables are created dynamicaaly just like Python. BUT, they need to start with var when first created.
+// --use strict;
+// var means I am declaring a variable in the current scope
+// -current scope might be:
+// 1.Window (global)
+// 2. function
+// 3. prototype methog
+
+
+// // You only use var one time. ONce it's declared, you don't declare it again.
+
+// in Python I used snake_case.
+// IN JS I use camelCase.
+// var fullName = "Valerie Thoma";
+// console.log(fullName);
+
+// fullName = "Valerie Jane Thoma";
+// console.log(fullName);
+
+// var firstName = "Valerie";
+// var nickName = "V-Money";
+// var lastName = "Thoma";
+
+// fullName = firstName + " " + nickName +  " " + lastName;
+// console.log(fullName);
+
+// // template literals(ES6)
+// fullName = `${firstName} "${nickName}" ${lastName}`
+// console.log(fullName);
+
+
+// Numbers:
+// var theYear = 2017: //Integer
+// var pi = 3.14 //float
+// //In JavaScript, you can get the datype, by runnin gthe type of method.
+
+// console.log(typeof(theYear));
+// console.log(typeof(pi));
+// var theYearAsAString = "2017";
+// console.log(typeof(theYearAsAString)); //string
+
+// //Math just like Python
+// var twoYearsAgo = theYear -2;
+// var twoYearsFromNow = theYear +2;
+
+// //A string always wins with a +
+// // concatonate
+// console.log(theYearAsAString + 2);
+// console.log(.2+.1); ///any guesses? 
+// Booleans
+// just like python, 1 or 0, off or on, true of false
+// True = true
+// var theTruth = true;
+// console.log(typeof(theTruth));
+
+// Math
+// +
+// -
+// *
+// /
+// %
+
+// var amIEven = 11 % 2;
+// console.log(amIEven);
+
+// Incrementing...
+// var i = 1;
+// i++; //i +=1; same as incrementing in python
+// //This is postfixing
+// i--;// i-=1;
+
+// console.log(i);
+// console.log(i++);
+
+
+// // Prefixing
+// console.log(i);
+// console.log(++i);
+
+// Order of operations is the same as Python.
+// * and / always come before + and -
+// always left to right
+// () overrides anything
+
+// prompt method
+// Belongs to the window (just like alert)
+
+// Take 2 arguments, the first is the message to display, the second (optional) is the default response.
+// var getUserName = prompt("What is your name?" , "Hayes");
+
+// CONDITIONALS
+
+
+// var classSize = 19; //number
+// var userResponse = prompt("How big is your class?");
+// var userResponseAsANumber = Number(userResponse);
+// if(userResponseAsANumber === classSize){
+// 	console.log("You are in the September class");
+// }
+
+
+// import Math is not neccessary!
+// var round = Math.round(10.2);
+// console.log(round);
+// round = Math.round(10.7);
+// console.log(round);
+
+
+var userResponse = Number(prompt("Please tell me a number between 1 and 10"));
+
+console.log(userResponse);
+
+var myNumber = Math.random();
+var myRoundNumber = Math.ceil(myNumber * 10);
+console.log(myRoundNumber);
+
+if(userResponse == myRoundNumber){
+	alert("WOW! That was the same number I was thinking of. Cool.");
+}	
+else(userResponse != myRoundNumber){
+	alert("Hey, too bad. We didn't pick the same number. I picked" + myNumber);
+}
+
+
+isNaN(x) //will return if x is a number, return true or false.
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

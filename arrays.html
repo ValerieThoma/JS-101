@@ -1,0 +1,118 @@
+<script type="text/javascript">
+
+// var students = [1];
+// students = ["Jennifer", "Nikolas", "Zach"];
+// students.push("Taylor");
+// students.push("Hayes");
+
+// console.log(students.length);
+
+// //LIke python and everyone else, the first index is 0;
+// // any data type can go in any index...
+// // 1.String
+// // 2.Array
+// // 3.Object
+// // 4.Boolean
+// // 5.Number
+
+// var nfcSouth = [
+// 	'Falcons',
+// 	'Saints',
+// 	'Bucs',
+// 	'Panthers'
+// ]
+// //to access an index of an array, use[n]
+
+// console.log(nfcSouth[0])
+// console.log(nfcSouth[6])
+
+// nfcSouth.push('Cowboys');
+// // to remove the last element in an array, .pop()
+// console.log(nfcSouth.pop());
+
+
+// var atlantaTeams =[
+// 	"Thrashers",
+// 	"Falcons",
+// 	"Hawks",
+// 	"Braves"
+	// ]
+// atlantaTeams.shift();
+// console.log(atlantaTeams);
+
+// //slice is like list[2:5] gets copy, does not change the original
+// // you tell it x and y, where to start and where to finish.
+
+// console.log(atlantaTeams.slice(1,2));
+
+// // console.log(atlantaTeams);
+// atlantaTeams2 = atlantaTeams;
+// console.log(atlantaTeams2);
+// atlantaTeams2.pop();
+// console.log(atlantaTeams);
+
+
+//splice will allow you to add and remove elements from any index.
+//splice args:
+// 1. where to start (just like slice)
+// 2. how many to delete
+// 2. what to insert (you can have multiple)
+
+// atlantaTeams.shift();//remove Thrashers
+// atlantaTeams.splice(0,1,"ATL United");
+// console.log(atlantaTeams);
+
+// //if not deleting, still must include 0
+// atlantaTeams.splice(0,0,"Silverbacks");
+// //if not adding... the 3rd is not neccessary 
+// atlantaTeams.splice(0,1);
+
+//Splice changes the array, slice just makes a copy!!!!
+
+
+//WHILE LOOPS 
+// var numberGuessed = false;
+// while(!numberGuessed){
+// 	var userGuess = prompt("Guess a nubmer");
+// 	if (userGuess == 2) {
+// 		numberGuessed = true;
+// 	}
+// }
+
+
+
+
+//For loop
+//first arg: iterator
+// 2nd arg: condition to keep runnning
+// // 3rd arg: step at the end of the loop
+// for(var i = 0; i < 100; i++){
+// 	console.log(i);
+// }
+
+// //'let' is an ES6 concept
+// // let will make a variable that lasts from { to }
+// //let is considered a block level variable 
+
+// for(let i = 0; i < 100; i++){
+// 	console.log(i);
+// }
+
+var name = "Jong";
+for(let i = 0; i < name.length; i ++){
+	console.log(name[i])
+}
+//a string is a fancy array
+//an array is a fancy object
+
+//A def in python is a function in JavaScript
+// instead of ; we will use {}
+
+
+
+
+
+
+
+
+</script>

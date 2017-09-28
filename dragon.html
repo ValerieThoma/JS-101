@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Masters of the Universe</title>
+
+	<style type="text/css" media="screen">
+		body{
+			text-align: center;
+		}
+		.message{
+			color: purple;
+			font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+		}
+		h3{
+			color: purple;
+			font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+		}
+		p{
+			color: grey;
+			font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+			text-align: left;
+			font-size: 24px;
+		}
+	</style>
+
+
+	<script type="text/javascript">
+		var heroHealth = 20;	
+		var enemyHealth = 15;
+
+
+		function rollDice(){
+			// console.log("User pressed the roll button!");
+			// get a random number between 1 and 6 for both dice.
+			var rand1 = Math.ceil(Math.random() * 6);
+			var rand2 = Math.ceil(Math.random() * 6);
+			// The dice images are dN.gif. We have 2 random numbers for that N.
+			// Use JS to update the DOM, so that the image files that show, will
+			// be teh same number as the random numbers above.
+			var dice = document.getElementById('dice')
+			console.dir(dice);
+			var image1 = dice.children[0];
+			var image2 = dice.children[1];
+			image1.src = `dragon-assets/d${rand1}.gif`;
+			image2.src = `dragon-assets/d${rand2}.gif`;
+
+			if (heroHealth > 0 && enemyHealth > 0){
+				if(rand1 + rand2 > 6){
+					enemyHealth = enemyHealth - 6;
+					document.getElementById('dragon').children[0].src = "./dragon-assets/skeletor-hurt.gif";
+					document.getElementById('dragon').children[0].style.height = "200px";
+					document.getElementById('dragon').children[0].style.width = "300px";
+					document.getElementById('message').innerHTML = `OUCH! You hurt me! Skeletor has ${enemyHealth} health.`
+				}else{
+					heroHealth = heroHealth -2
+					document.getElementById('dragon').children[0].src = "./dragon-assets/cringer.jpg";
+					document.getElementById('dragon').children[0].style.height = "200px";
+					document.getElementById('dragon').children[0].style.width = "300px";
+					document.getElementById('message').innerHTML = `I wish Battle Cat were here...Skeletor did damage. You have ${heroHealth} health.`
+				}
+			if(enemyHealth < 0){
+				document.getElementById('dragon').children[0].src = "./dragon-assets/cringer-brave.jpg";
+				document.getElementById('dragon').children[0].style.height = "200px";
+				document.getElementById('dragon').children[0].style.width = "300px";
+				document.getElementById('message').innerHTML = "<strong>Every day, we save the day! Gee-whiz.</strong> You have defeated Skeletor!";
+
+			}
+			}
+		}
+	
+
+	</script>
+
+</head>
+<body>
+	
+	<div id="game-wrapper">
+		<!-- <div id="score">
+			<p class="hero">Your score</p>
+			<p class="emeny">Skeletor</p>
+		</div> -->
+		<div id="dragon">
+			<img src="./dragon-assets/skeletor.jpg" width="400px" height="300px" />
+		</div>
+		<div id="message">
+			<h3>
+				Castle Grayskull is under attack again. Prince Adam is visiting Princess Adora in Etheria. It is up to you to protect the good people of Eternia. You must Roll to fight. You must roll an 8 or higher to defeat Skeletor.
+			</h3>
+		</div>
+		<div id="dice">
+			<img src="./dragon-assets/d1.gif" />
+			<img src="./dragon-assets/d1.gif" />
+		</div>
+		<div id="roll">
+			<button onclick="rollDice();">Fight!</button>
+		</div>
+	</div>
+
+</body>
+</html>
